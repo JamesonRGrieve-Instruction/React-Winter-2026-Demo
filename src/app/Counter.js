@@ -22,13 +22,14 @@ export default function Counter() {
             console.log("On Component Final Unmount (Once Per Mount)");
         }
     }, [])
+    throw new Error("Broken!");
+    // return (
+    //     <div>
+    //         <p>{count}</p>
+    //         <button onClick={() => {
+    //             setCount((previous) => [...previous, previous[previous.length - 1] + 1]);
+    //         }}>Count Up</button>
+    //     </div>
+    // );
 
-    return (
-        <div>
-            <p>{count}</p>
-            <button onClick={() => {
-                setCount((previous) => [...previous, previous[previous.length - 1] + 1]);
-            }}>Count Up</button>
-        </div>
-    );
 }
