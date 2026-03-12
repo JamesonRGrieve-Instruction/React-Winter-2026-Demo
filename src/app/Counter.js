@@ -1,9 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default function Counter({ start = 0 }) {
+export default function Counter({ start = 0, onChangeCallback }) {
     const [count, setCount] = useState(start);
+
+    useEffect(() => {
+        onChangeCallback(count);
+    }, [onChangeCallback, count]);
 
     return (
         <div>
