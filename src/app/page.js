@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import CardWrapper from "./CardWrapper";
 import Counter from "./Counter";
 export default function Home() {
-  const [pageCount, setPageCount] = useState(5);
+  const [pageCount, setPageCount] = useState([5]);
 
   const callbackPage = useCallback((newValue) => {
     setPageCount(newValue);
